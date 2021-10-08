@@ -24,10 +24,10 @@ solarNoon' loc day = if isDST day
 data LL = LL { lat :: Double, lon :: Double } deriving (Show)
 data Location = Location { tzOffset :: Int, coord :: LL } deriving (Show)
 
-washington = Location (-5) $ LL (38.88) (-77.03)
-dallas = Location (-6) $ LL (32.78) (-96.80)
-denver = Location (-7) $ LL (39.74) (-104.99)
-losAngeles = Location (-8) $ LL (34.05) (-118.23)
+-- washington = Location (-5) $ LL (38.88) (-77.03)
+-- dallas = Location (-6) $ LL (32.78) (-96.80)
+-- denver = Location (-7) $ LL (39.74) (-104.99)
+-- losAngeles = Location (-8) $ LL (34.05) (-118.23)
 
 degToRad :: Floating a => a -> a
 degToRad a = a * pi / 180
