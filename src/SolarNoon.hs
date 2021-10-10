@@ -91,13 +91,3 @@ dstStart yy = addDays 7 $ firstDayOfWeekOnAfter Sunday $ fromGregorian yy 03 01
 
 dstEnd :: Integer -> Day
 dstEnd yy = firstDayOfWeekOnAfter Sunday $ fromGregorian yy 11 01
-
--- | @dayOfWeekDiff a b = a - b@ in range 0 to 6.
--- The number of days from b to the next a.
-dayOfWeekDiff :: DayOfWeek -> DayOfWeek -> Int
-dayOfWeekDiff a b = mod' (fromEnum a - fromEnum b) 7
-
--- | The first day-of-week on or after some day
-firstDayOfWeekOnAfter :: DayOfWeek -> Day -> Day
-firstDayOfWeekOnAfter dw d = addDays (toInteger $ dayOfWeekDiff dw $ dayOfWeek d) d
-

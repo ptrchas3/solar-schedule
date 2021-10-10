@@ -19,6 +19,8 @@ dist-*
 .hsenv
 .HTF/
 *.ics
+*.lock
 *.o
 *.prof
 .stack-work/
+*.swp
